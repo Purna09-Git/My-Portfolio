@@ -20,7 +20,7 @@ export const projects: Project[] = [
     description: "AI-powered career intelligence platform utilizing neural parsing for resume analysis",
     longDescription:
       "The Goal: Bridge the gap between job seekers' resumes and current market requirements using Artificial Intelligence. The Solution: An intelligent platform that utilizes neural parsing and semantic matching. The system reads resumes, compares them against job descriptions, identifies critical skill gaps, and suggests optimizations to help users land their target roles. Uses neural parsing and semantic matching to analyze resumes, identify skill gaps, and align professional profiles with market demands. Helps candidates optimize their applications for specific job descriptions.",
-    image: "/career-war-room-ai.png", // Placeholder - make sure to add this image to your public folder
+    image: "/My-Portfolio/career-war-room-ai.png", // Placeholder - make sure to add this image to your public folder
     tags: ["AI", "NLP", "CSS", "Neural Networks", "Semantic Matching"],
     githubUrl: "https://github.com/Purna09-Git/career-war-room--An-Al-Resume-Insight-Job-Matcher",
     featured: true,
