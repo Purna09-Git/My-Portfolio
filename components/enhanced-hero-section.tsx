@@ -1,5 +1,7 @@
 "use client"
-
+import { getAssetPath } from '../lib/utils';
+const isProd = process.env.NODE_ENV === 'production';
+const bPath = isProd ? '/My-Portfolio' : '';
 import { motion } from "framer-motion"
 import { Github, Linkedin, Mail, Download, MapPin, Briefcase } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -31,7 +33,7 @@ export default function EnhancedHeroSection() {
               <div className="flex flex-col items-center p-8 w-full h-full">
                 <div className="relative mb-6">
                   <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent">
-                    <img src="/My-Portfolio/profile.jpg" alt="Purna Mummani" className="w-full h-full object-cover object-top" />
+                    <img src={getAssetPath("profile.jpg")} alt="Purna Mummani" className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-lg">
                     <span className="text-2xl">👋</span>
@@ -101,7 +103,7 @@ export default function EnhancedHeroSection() {
                   </a>
                 </div>
 
-                <a href="/My-Portfolio/resume.pdf" download className="w-full">
+                <a href={getAssetPath("resume.pdf")} download className="w-full">
                   <Button className="w-full gap-2 shadow-lg">
                     <Download className="w-4 h-4" />
                     Download Resume

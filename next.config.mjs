@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   output: 'export',
-  // Replace 'My-Portfolio' with your exact GitHub repository name
-  basePath: '/My-Portfolio', 
-  assetPrefix: '/My-Portfolio',
+  // GitHub needs the prefix, localhost needs it empty
+  basePath: isProd ? '/My-Portfolio' : '',
+  assetPrefix: isProd ? '/My-Portfolio' : '',
   images: {
     unoptimized: true,
   },
