@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website designed to showcase my software engineering projects, skills, and professional experience. Built with performance and interactivity in mind using the latest web technologies.
 
 ## 🔗 Live Demo
-<https://purnamummani-portfolio.netlify.app/>
+https://purna09-git.github.io/My-Portfolio/
 
 ## 🛠 Tech Stack
 
@@ -21,7 +21,7 @@ A modern, responsive personal portfolio website designed to showcase my software
 * **Glassmorphism** (Custom UI components)
 
 **Deployment:**
-* **Netlify**
+* **Github**
 
 ## ✨ Features
 
