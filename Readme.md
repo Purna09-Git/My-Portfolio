@@ -51,7 +51,7 @@ Ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-git clone [https://github.com/Purna09-Git/My-Portfolio.git]
+git clone https://github.com/Purna09-Git/My-Portfolio.git
     ```
 
 2.  **Navigate to the project directory:**
