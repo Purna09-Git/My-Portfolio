@@ -10,7 +10,6 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function EnhancedHeroSection() {
 
-  // 👇 1. ADD THIS SCROLL HELPER FUNCTION
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,6 +19,18 @@ export default function EnhancedHeroSection() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      {/* ADDED STYLES FOR THE WAVY BLOB */}
+      <style jsx>{`
+        @keyframes morph {
+          0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+          50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+          100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+        .animate-blob {
+          animation: morph 8s ease-in-out infinite;
+        }
+      `}</style>
+
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Card */}
@@ -32,8 +43,13 @@ export default function EnhancedHeroSection() {
             <GlassSurface width={350} height={500} borderRadius={24} displace={10} className="w-full max-w-[350px]">
               <div className="flex flex-col items-center p-8 w-full h-full">
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent">
-                    <img src={getAssetPath("profile.jpg")} alt="Purna Mummani" className="w-full h-full object-cover object-top" />
+                  {/* UPDATED CONTAINER: Added animate-blob and custom border-radius */}
+                  <div className="w-40 h-40 animate-blob overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent transition-all duration-500">
+                    <img 
+                      src={getAssetPath("profile.jpg")} 
+                      alt="Purna Mummani" 
+                      className="w-full h-full object-cover object-top scale-110" 
+                    />
                   </div>
                   <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-lg">
                     <span className="text-2xl">👋</span>
@@ -46,14 +62,10 @@ export default function EnhancedHeroSection() {
                   <span className="mr-2 text-foreground">I am a</span>
                   <TypeAnimation
                     sequence={[
-                      'Software Engineer',
-                      2000,
-                      'Java Developer',
-                      2000,
-                      'Full Stack Developer',
-                      2000,
-                      'Data Enthusiast',
-                      2000
+                      'Software Engineer', 2000,
+                      'Java Developer', 2000,
+                      'Full Stack Developer', 2000,
+                      'Data Enthusiast', 2000
                     ]}
                     wrapper="span"
                     speed={50}
@@ -75,29 +87,17 @@ export default function EnhancedHeroSection() {
 
                 <div className="flex gap-3 mb-6">
                   <a href="https://github.com/Purna09-Git" target="_blank" rel="noopener noreferrer">
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50"
-                    >
+                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
                       <Github className="w-5 h-5" />
                     </Button>
                   </a>
                   <a href="https://www.linkedin.com/in/purna09/" target="_blank" rel="noopener noreferrer">
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50"
-                    >
+                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
                       <Linkedin className="w-5 h-5" />
                     </Button>
                   </a>
                   <a href="mailto:pmummani@charlotte.edu">
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50"
-                    >
+                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
                       <Mail className="w-5 h-5" />
                     </Button>
                   </a>
@@ -113,64 +113,31 @@ export default function EnhancedHeroSection() {
             </GlassSurface>
           </motion.div>
 
-          {/* Content */}
+          {/* Content Section Remains the Same */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance">
-                <span className="block text-primary"></span>
-              </h1>
-            </motion.div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-balance">
+              <span className="block text-primary"></span>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl"
-            >
-              I enjoy building and deploying clean, scalable, full-stack systems that solve real-world problems and continuously drive business value. My expertise covers the entire development spectrum: from crafting responsive user experiences in React and Next.js to building and securing the back-end services with Spring Boot, Java, Python and AWS. I am currently seeking full-time roles where I can apply my blend of technical agility and creative insight to continuously learn, build, and deliver high-impact digital products that are functional and visually outstanding.
-            </motion.p>
+            <p className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl">
+              I enjoy building and deploying clean, scalable, full-stack systems that solve real-world problems and continuously drive business value. My expertise covers the entire development spectrum: from crafting responsive user experiences in React and Next.js to building and securing the back-end services with Spring Boot, Java, Python and AWS. I am currently seeking full-time roles where I can apply my blend of technical agility and creative insight to continuously learn, build, and deliver high-impact digital products.
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-wrap gap-4"
-            >
-              {/* 👇 2. UPDATED BUTTON: Links to Projects */}
-              <Button 
-                size="lg" 
-                className="gap-2"
-                onClick={() => scrollToSection("projects")}
-              >
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="gap-2" onClick={() => scrollToSection("projects")}>
                 View My Work
               </Button>
-
-              {/* 👇 3. UPDATED BUTTON: Links to Contact */}
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="gap-2 bg-transparent"
-                onClick={() => scrollToSection("contact")}
-              >
+              <Button size="lg" variant="outline" className="gap-2 bg-transparent" onClick={() => scrollToSection("contact")}>
                 Contact
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="grid grid-cols-3 gap-6 pt-8"
-            >
+            <div className="grid grid-cols-3 gap-6 pt-8">
               <div>
                 <div className="text-3xl font-bold text-primary mb-1">10+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
@@ -183,7 +150,7 @@ export default function EnhancedHeroSection() {
                 <div className="text-3xl font-bold text-primary mb-1">4</div>
                 <div className="text-sm text-muted-foreground">Certifications</div>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
