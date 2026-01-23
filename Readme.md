@@ -36,9 +36,6 @@ https://purna09-git.github.io/My-Portfolio/
 To run this project locally on your machine, follow these steps:
 
 ### 1. Clone the repository
-```bash
-
-
 
 To run this project locally, follow these steps:
 
