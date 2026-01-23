@@ -21,7 +21,7 @@ https://purna09-git.github.io/My-Portfolio/
 * **Glassmorphism** (Custom UI components)
 
 **Deployment:**
-* **Github**
+* **Github Pages**
 
 ## ✨ Features
 
