@@ -19,7 +19,6 @@ export default function EnhancedHeroSection() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      {/* ADDED STYLES FOR THE WAVY BLOB */}
       <style jsx>{`
         @keyframes morph {
           0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
@@ -40,10 +39,10 @@ export default function EnhancedHeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-end"
           >
-            <GlassSurface width={350} height={500} borderRadius={24} displace={10} className="w-full max-w-[350px]">
-              <div className="flex flex-col items-center p-8 w-full h-full">
+            {/* FIX: Removed fixed height, added minHeight style to prevent clipping */}
+            <GlassSurface width={350} borderRadius={24} displace={10} className="w-full max-w-[350px]" style={{ minHeight: '520px' }}>
+              <div className="flex flex-col items-center p-6 w-full h-full">
                 <div className="relative mb-6">
-                  {/* UPDATED CONTAINER: Added animate-blob and custom border-radius */}
                   <div className="w-40 h-40 animate-blob overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent transition-all duration-500">
                     <img 
                       src={getAssetPath("profile.jpg")} 
@@ -85,7 +84,7 @@ export default function EnhancedHeroSection() {
                   </div>
                 </div>
 
-                <div className="flex gap-3 mb-6">
+                <div className="flex gap-3 mb-8">
                   <a href="https://github.com/Purna09-Git" target="_blank" rel="noopener noreferrer">
                     <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
                       <Github className="w-5 h-5" />
@@ -103,8 +102,9 @@ export default function EnhancedHeroSection() {
                   </a>
                 </div>
 
-                <a href={getAssetPath("resume.pdf")} download className="w-full">
-                  <Button className="w-full gap-2 shadow-lg">
+                {/* FIX: Added mt-auto to push button to bottom and mb-2 for breathing room */}
+                <a href={getAssetPath("resume.pdf")} download className="w-full mt-auto mb-2">
+                  <Button className="w-full gap-2 shadow-lg hover:scale-[1.02] transition-transform">
                     <Download className="w-4 h-4" />
                     Download Resume
                   </Button>
@@ -113,7 +113,7 @@ export default function EnhancedHeroSection() {
             </GlassSurface>
           </motion.div>
 
-          {/* Content Section Remains the Same */}
+          {/* Content Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
