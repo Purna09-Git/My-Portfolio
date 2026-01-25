@@ -21,7 +21,7 @@ https://purna09-git.github.io/My-Portfolio/
 * **Glassmorphism** (Custom UI components)
 
 **Deployment:**
-* **Github**
+* **Github Pages**
 
 ## ✨ Features
 
@@ -36,5 +36,39 @@ https://purna09-git.github.io/My-Portfolio/
 To run this project locally on your machine, follow these steps:
 
 ### 1. Clone the repository
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js]
+- [npm]
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Purna09-Git/My-Portfolio.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd My-Portfolio
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+Start the development server:
 ```bash
-git clone [https://github.com/Purna09-Git/My-Portfolio.git](https://github.com/Purna09-Git/My-Portfolio.git)
+npm start
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+
