@@ -62,7 +62,7 @@ export function AboutSection() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">About Me</h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-          I’m a passionate Full Stack Developer with specialized expertise in architecting scalable Microservices and Cloud-Native systems on AWS. By seamlessly integrating Generative AI and Machine Learning models into full-stack applications, I build intelligent, future-ready digital experiences that solve complex real-world problems.
+    
           </p>
         </motion.div>
 

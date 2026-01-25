@@ -8,14 +8,14 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio | Full Stack Developer",
-  description: "A showcase of my work, skills, and experience as a Full Stack Developer",
+  title: "Purna Mummani | Portfolio",
+  description: "A showcase of my work, skills, and experience as a Software Engineer",
   generator: "",
   keywords: ["portfolio", "developer", "full stack", "web development", "projects"],
   authors: [{ name: "Your Name" }],
   openGraph: {
-    title: "Portfolio | Full Stack Developer",
-    description: "A showcase of my work, skills, and experience as a Full Stack Developer",
+    title: "Purna Mummani | Portfolio",
+    description: "A showcase of my work, skills, and experience as a Software Engineer",
     type: "website",
   },
   icons: {

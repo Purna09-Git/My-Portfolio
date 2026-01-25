@@ -125,7 +125,7 @@ export default function EnhancedHeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl">
-              I enjoy building and deploying clean, scalable, full-stack systems that solve real-world problems and continuously drive business value. My expertise covers the entire development spectrum: from crafting responsive user experiences in React and Next.js to building and securing the back-end services with Spring Boot, Java, Python and AWS. I am currently seeking full-time roles where I can apply my blend of technical agility and creative insight to continuously learn, build, and deliver high-impact digital products.
+            Software Engineer with experience building full-stack and frontend web applications using ASP.NET MVC, C#, React, JavaScript, and SQL. I’ve worked on enterprise systems and nonprofit platforms, focusing on data-driven features, reporting workflows, and user-friendly interfaces. I also have hands-on experience with SQL-based data validation and dashboards in Power BI/Tableau.
             </p>
 
             <div className="flex flex-wrap gap-4">

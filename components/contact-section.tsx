@@ -117,13 +117,36 @@ export function ContactSection() {
             </GlassSurface>
 
             <GlassSurface width="100%" height={200} borderRadius={20} displace={5}>
-              <div className="p-8 w-full text-left">
-                <h3 className="text-xl font-bold text-foreground mb-4">Code. Connect. Conquer!</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                I'm currently seeking challenging Software Engineer roles, with a focus on Java/Spring Boot, React, and Cloud technologies. I'd love to discuss how I can contribute to your team.
-                </p>
-              </div>
-            </GlassSurface>
+  <div className="p-8 w-full text-left relative flex flex-col justify-center">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="relative flex h-3 w-3">
+        {/* Blinking dot animation using emerald-green #00b87c */}
+        <span 
+          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" 
+          style={{ backgroundColor: '#00b87c' }}
+        ></span>
+        <span 
+          className="relative inline-flex rounded-full h-3 w-3" 
+          style={{ backgroundColor: '#00b87c' }}
+        ></span>
+      </div>
+      <span 
+        className="text-xs font-mono uppercase tracking-widest font-bold"
+        style={{ color: '#009ba9' }}
+      >
+        Open for new challenges
+      </span>
+    </div>
+
+    <h3 className="text-xl font-bold text-foreground mb-2">Let's build the next big thing.</h3>
+    <p className="text-muted-foreground leading-relaxed text-sm">
+      I specialize in turning complex data into clean, functional web apps. 
+      If you're looking for an engineer who values precision and user experience, 
+      I’m ready to jump in and help your team succeed.
+    </p>
+  </div>
+</GlassSurface>
+ 
           </motion.div>
 
           {/* Contact Form */}
