@@ -119,17 +119,7 @@ export function ContactSection() {
             <GlassSurface width="100%" height={200} borderRadius={20} displace={5}>
   <div className="p-8 w-full text-left relative flex flex-col justify-center">
     <div className="flex items-center gap-3 mb-4">
-      <div className="relative flex h-3 w-3">
-        {/* Blinking dot animation using emerald-green #00b87c */}
-        <span 
-          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" 
-          style={{ backgroundColor: '#00b87c' }}
-        ></span>
-        <span 
-          className="relative inline-flex rounded-full h-3 w-3" 
-          style={{ backgroundColor: '#00b87c' }}
-        ></span>
-      </div>
+      
       <span 
         className="text-xs font-mono uppercase tracking-widest font-bold"
         style={{ color: '#009ba9' }}
