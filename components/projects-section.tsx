@@ -57,7 +57,7 @@ export function ProjectsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             A showcase of my recent work and side projects. Each project represents a unique challenge and learning

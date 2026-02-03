@@ -17,36 +17,20 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
-    title: "Student IT Support Technician",
-    company: "University of North Carolina at Charlotte",
-    location: "Charlotte, NC",
-    period: "Aug 2024 - May 2025",
-    type: "Part-time",
+    title: "Software Engineer Intern",
+    company: "Adobe",
+    location: "Remote, USA",
+    period: "Jul 2025 - Current",
+    type: "Internship",
     description:
-      "Delivering frontline IT support and troubleshooting connectivity, hardware, and software issues for students and staff.",
+      "Contributing to the design and development of scalable, enterprise-grade applications using Java, Spring Boot, and React. Supporting internal and customer-facing platforms for 2M+ active users while adhering to Adobe’s strict engineering standards and secure development practices.",
     responsibilities: [
-      "Resolved 15–20 weekly technical issues regarding Wi-Fi, credentials, and software via the Mercury ticketing system.",
-      "Performed frontline troubleshooting for Windows and macOS devices, printers, and residence hall network connections.",
-      "Facilitated campus move-in technology setup, assisting residents with Wi-Fi onboarding and smart device registration",
-      "Coordinated with senior IT staff to escalate complex incidents while maintaining clear communication with end-users.",
-    ],
-    technologies: ["Mercury Ticketing System", "Windows 10/11", "macOS", "Active Directory", "WPA2 Enterprise", "iOS/Android"],
-  },
-  {
-    title: "Software Engineer",
-    company: "Cognizant",
-    location: "Hyderabad, India",
-    period: "Jul 2022 - Dec 2023",
-    type: "Full-time",
-    description:
-      "Developed and enhanced enterprise web applications for global clients, focusing on performance optimization and scalability.",
-    responsibilities: [
-      "Developed enterprise web applications using React.js, improving UI responsiveness and reducing bounce rate by 18%",
-      "Implemented Next.js SSR and API routes, boosting page load speed by 30% and increasing organic traffic by 25%",
-      "Optimized frontend workflows using lazy loading, code splitting, and state management techniques",
-      "Designed and enforced secure authentication and encrypted data handling for 50+ internal users",
-      "Collaborated with cross-functional teams using Agile methodologies and CI/CD pipelines",
-      "Mentored junior developers and conducted code reviews to maintain high code quality standards",
+     "Assisted in implementing backend components on AWS (EC2, Lambda, RDS), reducing processing latency by 21% through optimized resource usage.",
+    "Developed secure REST APIs with OAuth 2.0 and JWT, improving data security posture and role-based access control.",
+    "Analyzed SQL queries and indexing for PostgreSQL and Oracle, resulting in a 28% improvement in query response times.",
+    "Collaborated on React and TypeScript features, building reusable components that achieved 24% faster page load times.",
+    "Enhanced CI/CD pipelines using Jenkins and Docker, reducing manual deployment effort by 30% and improving release consistency.",
+    "Utilized AWS CloudWatch to reduce issue detection time by 26% while delivering user stories via Agile Scrum ceremonies."
     ],
     technologies: [
       "React.js",
@@ -57,7 +41,43 @@ const experienceData: ExperienceItem[] = [
       "PostgreSQL",
       "AWS",
       "Docker",
-      "Jira",
+      "Jenkins",
+    ],
+  },
+  {
+    
+    title: "Software Engineer Graduate Assistant ",
+    company: "University of North Carolina at Charlotte",
+    location: "Charlotte, NC",
+    period: "May 2024 - April 2025",
+    type: "Part-time",
+    description:
+      "Architecting AI-driven systems and modernizing infrastructure to support university-wide faculty operations and legacy system transitions.",
+    responsibilities: [
+     "Developed an AI-driven Learning Management System using React, TypeScript, and FastAPI, integrating a RAG pipeline to automate support ticket resolution for 500+ faculty users.",
+    "Engineered scalable vector search infrastructure using Pinecone and LangChain, enabling semantic queries with Gemini LLMs while maintaining 96% response accuracy.",
+    "Modernized legacy monitoring systems into a Spring Boot microservices architecture on AWS, supporting 110+ parallel requests/sec with zero data leakage.",
+    "Implemented LLM Guardrails and Circuit Breaker patterns to ensure high system reliability and secure data handling during high-traffic periods.",
+    "Optimized cloud-based data retrieval workflows to decrease query latency and improve the overall performance of internal knowledge bases."
+    ],
+    technologies: ["React", "TypeScript", "FastAPI", "Python", "Spring Boot", "AWS", "Pinecone", "LangChain", "Gemini LLM"],
+  },
+  {
+    title: "Software Engineer",
+    company: "Accenture",
+    location: "Hyderabad, India",
+    period: "Jul 2022 - Dec 2023",
+    type: "Full-time",
+    description:
+      "Developed and enhanced enterprise web applications for global clients, focusing on performance optimization and scalability.",
+    responsibilities: [
+      "Designed and implemented modular microservices to modernize legacy systems, reducing application downtime by 28% through improved fault isolation.",
+    "Optimized database schemas and SQL queries across MySQL and Oracle, resulting in 34% faster data retrieval and improved reporting accuracy.",
+    "Built dynamic, responsive web interfaces using Angular and JavaScript, reducing end-user support tickets by 22% through improved UI consistency.",
+    "Supported  in cloud migration to AWS environments, contributing to a 25% reduction in infrastructure costs through optimized resource utilization."
+    ],
+    technologies: [
+      "Java", "Spring MVC", "Angular", "JavaScript", "MySQL", "Oracle", "AWS", "Hibernate"
     ],
   },
 ]
@@ -200,7 +220,7 @@ export function ExperienceSection() {
           className="text-center mt-12"
         >
           <p className="italic inline-block px-1 rounded-sm text-white bg-teal-400/20">
-  2 years of professional software engineering experience
+  3 years of professional software engineering experience
 </p>
         </motion.div>
       </div>

@@ -125,7 +125,8 @@ export default function EnhancedHeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl">
-            Software Engineer with experience building full-stack and frontend web applications using ASP.NET MVC, C#, React, JavaScript, and SQL. I’ve worked on enterprise systems and nonprofit platforms, focusing on data-driven features, reporting workflows, and user-friendly interfaces. I also have hands-on experience with SQL-based data validation and dashboards in Power BI/Tableau.
+            I’m all about bridging the gap between complex backend architectures and intuitive, high-performance user experiences.I love the challenge of scaling systems, but I’m especially drawn to the intersection of Software Engineering and Generative AI. Right now, I’m focused on architecting intelligent solutions using RAG pipelines, Gemini LLMs, and Pinecone to turn static data into interactive, human-centric insights.
+            I enjoy the puzzle of modernizing legacy systems into sleek microservices and seeing how a well-optimized AWS infrastructure can directly impact a product's success. For me, it’s not just about writing clean code in Java or React—it’s about creating seamless digital experiences that actually help people navigate their world more easily.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -143,7 +144,7 @@ export default function EnhancedHeroSection() {
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">2+</div>
+                <div className="text-3xl font-bold text-primary mb-1">3+</div>
                 <div className="text-sm text-muted-foreground">Years Exp.</div>
               </div>
               <div>
