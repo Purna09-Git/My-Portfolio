@@ -140,7 +140,7 @@ export default function EnhancedHeroSection() {
                 <div className="text-sm text-muted-foreground">Projects</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-1">3+</div>
+                <div className="text-3xl font-bold text-primary mb-1">3</div>
                 <div className="text-sm text-muted-foreground">Years Exp.</div>
               </div>
               <div>
