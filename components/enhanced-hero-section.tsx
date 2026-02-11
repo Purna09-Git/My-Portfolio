@@ -10,13 +10,22 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function EnhancedHeroSection() {
 
+  // Logic to scroll exactly one screen height down
+  const scrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth"
+    });
+  };
+
+  // Function for the buttons to go to specific sections
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
+  }; 
+  
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
       <style jsx>{`
@@ -39,78 +48,66 @@ export default function EnhancedHeroSection() {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-end"
           >
-            {/* FIX: Removed fixed height, added minHeight style to prevent clipping */}
-            <GlassSurface width={350} borderRadius={24} displace={10} className="w-full max-w-[350px]" style={{ minHeight: '520px' }}>
-              <div className="flex flex-col items-center p-6 w-full h-full">
-                <div className="relative mb-6">
-                  <div className="w-40 h-40 animate-blob overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent transition-all duration-500">
-                    <img 
-                      src={getAssetPath("profile.jpg")} 
-                      alt="Purna Mummani" 
-                      className="w-full h-full object-cover object-top scale-110" 
-                    />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-lg">
-                    <span className="text-2xl">👋</span>
-                  </div>
-                </div>
+           {/* FIX: Reduced minHeight from 520px to ~420px to match the removed content */}
+<GlassSurface width={350} borderRadius={24} displace={10} className="w-full max-w-[350px]" style={{ minHeight: '420px' }}>
+  <div className="flex flex-col items-center p-6 w-full h-full">
+    <div className="relative mb-6">
+      <div className="w-40 h-40 animate-blob overflow-hidden border-4 border-primary/30 shadow-xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent transition-all duration-500">
+        <img 
+          src={getAssetPath("profile.jpg")} 
+          alt="Purna Mummani" 
+          className="w-full h-full object-cover object-top scale-110" 
+        />
+      </div>
+      <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-primary rounded-full flex items-center justify-center border-4 border-background shadow-lg">
+        <span className="text-2xl">👋</span>
+      </div>
+    </div>
 
-                <h2 className="text-2xl font-bold mb-2 text-center">Hi, I am Purna Mummani</h2>
-                
-                <div className="text-primary font-semibold mb-4 text-lg h-8 flex items-center">
-                  <span className="mr-2 text-foreground">I am a</span>
-                  <TypeAnimation
-                    sequence={[
-                      'Software Engineer', 2000,
-                      'Java Developer', 2000,
-                      'Full Stack Developer', 2000,
-                      'Data Enthusiast', 2000
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                    className="text-primary font-bold"
-                  />
-                </div>
+    <h2 className="text-2xl font-bold mb-2 text-center">Hi, I am Purna Mummani</h2>
+    
+    <div className="text-primary font-semibold mb-4 text-lg h-8 flex items-center">
+      <span className="mr-2 text-foreground">I am a</span>
+      <TypeAnimation
+        sequence={[
+          'Software Engineer', 2000,
+          'Java Developer', 2000,
+          'Data Analyst', 2000,
+          'AI Enthusiast', 2000
+        ]}
+        wrapper="span"
+        speed={50}
+        repeat={Infinity}
+        className="text-primary font-bold"
+      />
+    </div>
+    <div className="flex gap-3 mb-8">
+      <a href="https://github.com/Purna09-Git" target="_blank" rel="noopener noreferrer">
+        <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
+          <Github className="w-5 h-5" />
+        </Button>
+      </a>
+      <a href="https://www.linkedin.com/in/purna09/" target="_blank" rel="noopener noreferrer">
+        <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
+          <Linkedin className="w-5 h-5" />
+        </Button>
+      </a>
+      <a href="mailto:purna.mummani12@gmail.com">
+        <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
+          <Mail className="w-5 h-5" />
+        </Button>
+      </a>
+    </div>
 
-                <div className="flex flex-col gap-2 mb-6 w-full">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4" />
-                    <span>Charlotte, NC</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Briefcase className="w-4 h-4" />
-                    <span>Available for Opportunities</span>
-                  </div>
-                </div>
-
-                <div className="flex gap-3 mb-8">
-                  <a href="https://github.com/Purna09-Git" target="_blank" rel="noopener noreferrer">
-                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
-                      <Github className="w-5 h-5" />
-                    </Button>
-                  </a>
-                  <a href="https://www.linkedin.com/in/purna09/" target="_blank" rel="noopener noreferrer">
-                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
-                      <Linkedin className="w-5 h-5" />
-                    </Button>
-                  </a>
-                  <a href="mailto:pmummani@charlotte.edu">
-                    <Button size="icon" variant="outline" className="rounded-full bg-card/30 backdrop-blur-sm border-white/20 hover:bg-card/50">
-                      <Mail className="w-5 h-5" />
-                    </Button>
-                  </a>
-                </div>
-
-                {/* FIX: Added mt-auto to push button to bottom and mb-2 for breathing room */}
-                <a href={getAssetPath("resume.pdf")} download className="w-full mt-auto mb-2">
-                  <Button className="w-full gap-2 shadow-lg hover:scale-[1.02] transition-transform">
-                    <Download className="w-4 h-4" />
-                    Download Resume
-                  </Button>
-                </a>
-              </div>
-            </GlassSurface>
+    {/* FIX: Removed mt-auto so it sits right under the social icons */}
+    <a href={getAssetPath("resume.pdf")} download className="w-full mb-2">
+      <Button className="w-full gap-2 shadow-lg hover:scale-[1.02] transition-transform">
+        <Download className="w-4 h-4" />
+        Find My Resume Here
+      </Button>
+    </a>
+  </div>
+</GlassSurface>
           </motion.div>
 
           {/* Content Section */}
@@ -125,8 +122,7 @@ export default function EnhancedHeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl">
-            I’m all about bridging the gap between complex backend architectures and intuitive, high-performance user experiences.I love the challenge of scaling systems, but I’m especially drawn to the intersection of Software Engineering and Generative AI. Right now, I’m focused on architecting intelligent solutions using RAG pipelines, Gemini LLMs, and Pinecone to turn static data into interactive, human-centric insights.
-            I enjoy the puzzle of modernizing legacy systems into sleek microservices and seeing how a well-optimized AWS infrastructure can directly impact a product's success. For me, it’s not just about writing clean code in Java or React—it’s about creating seamless digital experiences that actually help people navigate their world more easily.
+            I'm all about bridging complex backend architectures and high-performance user experiences. I'm especially drawn to Software Engineering and Generative AI, currently focused on architecting intelligent solutions using RAG pipelines, Gemini LLMs, and Pinecone to turn static data into human-centric insights. I invite you to explore my portfolio, where I showcase my work in data analytics, AI, cybersecurity, and full-stack development. With a strong focus on uncovering actionable insights from complex data, I strive to bridge the gap between technology and business.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -155,6 +151,34 @@ export default function EnhancedHeroSection() {
           </motion.div>
         </div>
       </div>
+{/* --- REVISED SCROLL DOWN INDICATOR --- */}
+<motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        // REVISED: Uses scrollDown function to go exactly to the next page/section
+        onClick={scrollDown}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer z-20 group"
+      >
+        <span className="text-[10px] uppercase tracking-[0.4em] text-muted-foreground font-bold group-hover:text-primary transition-colors">
+          Scroll Down
+        </span>
+        
+        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center p-1.5 group-hover:border-primary/50 transition-colors">
+          <motion.div 
+            animate={{ 
+              y: [0, 15, 0],
+              opacity: [1, 0, 1] 
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="w-1 h-2 bg-primary rounded-full"
+          />
+        </div>
+      </motion.div>
     </section>
   )
 }

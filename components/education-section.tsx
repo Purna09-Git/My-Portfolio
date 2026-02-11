@@ -32,9 +32,9 @@ const educationData: EducationItem[] = [
     institution: "Vellore Institute of Technology",
     location: "Vellore, India",
     period: "Jul 2019 - May 2023",
-    gpa: "3.32/4.0",
+    
     description:
-      "I completed my Bachelor's in Computer Science at Vellore Institute of Technology with a GPA of 3.32. My coursework included Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Machine Learning, Internet of Things, and Cryptography & Network Security. Through this program, I led team projects in IoT, Machine Learning, and Blockchain technologies, served as a core member of the Coding Club, and won the 'Most Contemporary Project' award at the Engineering Clinics Expo 2020.",
+      "I completed my Bachelor's in Computer Science at Vellore Institute of Technology . My coursework included Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Machine Learning, Internet of Things, and Cryptography & Network Security. Through this program, I led team projects in IoT, Machine Learning, and Blockchain technologies, served as a core member of the Coding Club, and won the 'Most Contemporary Project' award at the Engineering Clinics Expo 2020.",
     highlights: [
       
     ],

@@ -128,11 +128,9 @@ export function ContactSection() {
       </span>
     </div>
 
-    <h3 className="text-xl font-bold text-foreground mb-2">Let's build the next big thing.</h3>
+    <h3 className="text-xl font-bold text-foreground mb-2">Let’s Connect and Explore Innovative Solutions Together!</h3>
     <p className="text-muted-foreground leading-relaxed text-sm">
-      I specialize in turning complex data into clean, functional web apps. 
-      If you're looking for an engineer who values precision and user experience, 
-      I’m ready to jump in and help your team succeed.
+    
     </p>
   </div>
 </GlassSurface>

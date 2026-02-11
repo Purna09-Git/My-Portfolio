@@ -20,17 +20,17 @@ const experienceData: ExperienceItem[] = [
     title: "Software Engineer Intern",
     company: "Adobe",
     location: "Remote, USA",
-    period: "Jul 2025 - Current",
+    period: "Jun 2025 - Current",
     type: "Internship",
     description:
       "Contributing to the design and development of scalable, enterprise-grade applications using Java, Spring Boot, and React. Supporting internal and customer-facing platforms for 2M+ active users while adhering to Adobe’s strict engineering standards and secure development practices.",
     responsibilities: [
-     "Assisted in implementing backend components on AWS (EC2, Lambda, RDS), reducing processing latency by 21% through optimized resource usage.",
+     "Assisted in implementing backend components on AWS (EC2, Lambda, RDS), reducing processing latency by ~21% through optimized resource usage.",
     "Developed secure REST APIs with OAuth 2.0 and JWT, improving data security posture and role-based access control.",
-    "Analyzed SQL queries and indexing for PostgreSQL and Oracle, resulting in a 28% improvement in query response times.",
+    "Analyzed SQL queries and indexing for PostgreSQL and Oracle, resulting in a ~28% improvement in query response times.",
     "Collaborated on React and TypeScript features, building reusable components that achieved 24% faster page load times.",
     "Enhanced CI/CD pipelines using Jenkins and Docker, reducing manual deployment effort by 30% and improving release consistency.",
-    "Utilized AWS CloudWatch to reduce issue detection time by 26% while delivering user stories via Agile Scrum ceremonies."
+    "Utilized AWS CloudWatch to reduce issue detection time by ~26% while delivering user stories via Agile Scrum ceremonies."
     ],
     technologies: [
       "React.js",
@@ -46,19 +46,17 @@ const experienceData: ExperienceItem[] = [
   },
   {
     
-    title: "Software Engineer Graduate Assistant ",
+    title: "Graduate Research Assistant ",
     company: "University of North Carolina at Charlotte",
     location: "Charlotte, NC",
     period: "May 2024 - April 2025",
     type: "Part-time",
     description:
-      "Architecting AI-driven systems and modernizing infrastructure to support university-wide faculty operations and legacy system transitions.",
+    "Assisted the professor with course design, grading, and scheduling, while also conducting research on metabofood datasets to analyze supplements and disease cures using advanced visualization techniques",
     responsibilities: [
-     "Developed an AI-driven Learning Management System using React, TypeScript, and FastAPI, integrating a RAG pipeline to automate support ticket resolution for 500+ faculty users.",
-    "Engineered scalable vector search infrastructure using Pinecone and LangChain, enabling semantic queries with Gemini LLMs while maintaining 96% response accuracy.",
-    "Modernized legacy monitoring systems into a Spring Boot microservices architecture on AWS, supporting 110+ parallel requests/sec with zero data leakage.",
-    "Implemented LLM Guardrails and Circuit Breaker patterns to ensure high system reliability and secure data handling during high-traffic periods.",
-    "Optimized cloud-based data retrieval workflows to decrease query latency and improve the overall performance of internal knowledge bases."
+    "Conducted data-driven research on student learning outcomes using Python, Excel, and SQL, performing statistical analysis and data visualization that contributed to a ~20% improvement in institutional assessment strategies",
+    "Developed interactive dashboards using Tableau/Power BI to automate grading analytics and reporting workflows, reducing Instructor grade processing time by ~25% and improving data-driven decision-making for academic leadership",
+    "Mentored students in research initiatives, applying R and Python for statistical analysis and data exploration.."
     ],
     technologies: ["React", "TypeScript", "FastAPI", "Python", "Spring Boot", "AWS", "Pinecone", "LangChain", "Gemini LLM"],
   },
@@ -66,15 +64,15 @@ const experienceData: ExperienceItem[] = [
     title: "Software Engineer",
     company: "Accenture",
     location: "Hyderabad, India",
-    period: "Jul 2022 - Dec 2023",
+    period: "Jan 2022 - Dec 2023",
     type: "Full-time",
     description:
       "Developed and enhanced enterprise web applications for global clients, focusing on performance optimization and scalability.",
     responsibilities: [
-      "Designed and implemented modular microservices to modernize legacy systems, reducing application downtime by 28% through improved fault isolation.",
-    "Optimized database schemas and SQL queries across MySQL and Oracle, resulting in 34% faster data retrieval and improved reporting accuracy.",
+      "Designed and implemented modular microservices to modernize legacy systems, reducing application downtime by ~28% through improved fault isolation.",
+    "Optimized database schemas and SQL queries across MySQL and Oracle, resulting in ~34% faster data retrieval and improved reporting accuracy.",
     "Built dynamic, responsive web interfaces using Angular and JavaScript, reducing end-user support tickets by 22% through improved UI consistency.",
-    "Supported  in cloud migration to AWS environments, contributing to a 25% reduction in infrastructure costs through optimized resource utilization."
+    "Supported  in cloud migration to AWS environments, contributing to a ~25% reduction in infrastructure costs through optimized resource utilization."
     ],
     technologies: [
       "Java", "Spring MVC", "Angular", "JavaScript", "MySQL", "Oracle", "AWS", "Hibernate"
