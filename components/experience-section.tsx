@@ -18,30 +18,37 @@ interface ExperienceItem {
 const experienceData: ExperienceItem[] = [
   {
     title: "Software Engineer Intern",
-    company: "Adobe",
-    location: "Remote, USA",
+    company: "IBM",
+    location: "Remote, NC",
     period: "Jun 2025 - Current",
     type: "Internship",
     description:
-      "Contributing to the design and development of scalable, enterprise-grade applications using Java, Spring Boot, and React. Supporting internal and customer-facing platforms for 2M+ active users while adhering to Adobe’s strict engineering standards and secure development practices.",
+      "Contributing to the design and development of scalable microservices and enterprise applications using Java, Spring Boot, and React. Supporting mission-critical internal and client-facing platforms serving 2M+ active users globally while adhering to IBM's enterprise architecture standards and secure development practices.",
     responsibilities: [
-     "Assisted in implementing backend components on AWS (EC2, Lambda, RDS), reducing processing latency by ~21% through optimized resource usage.",
-    "Developed secure REST APIs with OAuth 2.0 and JWT, improving data security posture and role-based access control.",
-    "Analyzed SQL queries and indexing for PostgreSQL and Oracle, resulting in a ~28% improvement in query response times.",
-    "Collaborated on React and TypeScript features, building reusable components that achieved 24% faster page load times.",
-    "Enhanced CI/CD pipelines using Jenkins and Docker, reducing manual deployment effort by 30% and improving release consistency.",
-    "Utilized AWS CloudWatch to reduce issue detection time by ~26% while delivering user stories via Agile Scrum ceremonies."
+      "Contributed to designing and developing scalable microservices using Java, Spring Boot, and React, supporting enterprise platforms serving 2M+ active users globally.",
+      "Developed secure RESTful APIs integrated with OAuth 2.0 and JWT, strengthening role-based access control and improving PostgreSQL and Oracle query performance by ~30%.",
+      "Built reusable UI components using React and TypeScript, collaborating with senior engineers to achieve ~24% faster dashboard page load times.",
+      "Assisted in strengthening CI/CD pipelines using Jenkins, GitHub Actions, and Docker, reducing manual deployment effort and improving release cycle consistency.",
+      "Supported Kubernetes-based deployments on AWS (EC2, RDS, S3, Lambda), improving environment consistency and reducing release rollback incidents through optimized service orchestration.",
+      "Utilized AWS CloudWatch and centralized logging tools to proactively identify bottlenecks, reducing mean time to resolution (MTTR) by ~29% across distributed production systems."
     ],
     technologies: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
       "Java",
       "Spring Boot",
+      "React",
+      "TypeScript",
+      "RESTful APIs",
+      "OAuth 2.0",
+      "JWT",
       "PostgreSQL",
-      "AWS",
+      "Oracle",
+      "AWS (EC2, RDS, S3, Lambda)",
+      "CloudWatch",
       "Docker",
+      "Kubernetes",
       "Jenkins",
+      "GitHub Actions",
+      "CI/CD"
     ],
   },
   {

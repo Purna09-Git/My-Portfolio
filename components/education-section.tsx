@@ -30,7 +30,7 @@ const educationData: EducationItem[] = [
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "Vellore Institute of Technology",
-    location: "Vellore, India",
+    location: "India",
     period: "Jul 2019 - May 2023",
     
     description:
