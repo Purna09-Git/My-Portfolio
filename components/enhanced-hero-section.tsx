@@ -122,7 +122,7 @@ export default function EnhancedHeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed text-justify text-pretty max-w-xl">
-            I'm all about bridging complex backend architectures and high-performance user experiences. I'm especially drawn to Software Engineering and Generative AI, currently focused on architecting intelligent solutions using RAG pipelines, Gemini LLMs, and Pinecone to turn static data into human-centric insights. I invite you to explore my portfolio, where I showcase my work in data analytics, AI, cybersecurity, and full-stack development. With a strong focus on uncovering actionable insights from complex data, I strive to bridge the gap between technology and business.
+            I'm all about bridging complex backend architectures and high-performance user experiences. I'm especially drawn to Software Engineering and Generative AI, currently focused on architecting intelligent solutions using RAG pipelines, Gemini LLMs, and Pinecone to turn static data into human-centric insights. I invite you to explore my portfolio, where I showcase my work in data analytics, AI and full-stack development. With a strong focus on uncovering actionable insights from complex data, I strive to bridge the gap between technology and business.
             </p>
 
             <div className="flex flex-wrap gap-4">
