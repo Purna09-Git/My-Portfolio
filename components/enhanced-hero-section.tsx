@@ -71,8 +71,7 @@ export default function EnhancedHeroSection() {
       <TypeAnimation
         sequence={[
           'Software Engineer', 2000,
-          'Java Developer', 2000,
-          'Data Analyst', 2000,
+          'Full-Stack Developer', 2000,
           'AI Enthusiast', 2000
         ]}
         wrapper="span"

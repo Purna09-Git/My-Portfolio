@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -14,7 +13,6 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -37,7 +35,6 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link
             href="#home"
             className="text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors"
@@ -58,7 +55,6 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
             <Button asChild size="sm" className="ml-4">
               <Link href="#contact">Get in Touch</Link>
             </Button>
@@ -66,7 +62,6 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
             <button
               className="text-foreground"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
