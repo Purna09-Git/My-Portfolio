@@ -17,11 +17,11 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
-    title: "Software Engineer Intern",
+    title: "Software Engineer",
     company: "IBM",
     location: "Remote, NC",
     period: "Jun 2025 - Current",
-    type: "Internship",
+    type: "Full-time",
     description:
       "Contributing to the design and development of scalable microservices and enterprise applications using Java, Spring Boot, and React. Supporting mission-critical internal and client-facing platforms serving 2M+ active users globally while adhering to IBM's enterprise architecture standards and secure development practices.",
     responsibilities: [
@@ -61,9 +61,10 @@ const experienceData: ExperienceItem[] = [
     description:
     "Assisted the professor with course design, grading, and scheduling, while also conducting research on metabofood datasets to analyze supplements and disease cures using advanced visualization techniques",
     responsibilities: [
-    "Conducted data-driven research on student learning outcomes using Python, Excel, and SQL, performing statistical analysis and data visualization that contributed to a ~20% improvement in institutional assessment strategies",
-    "Developed interactive dashboards using Tableau/Power BI to automate grading analytics and reporting workflows, reducing Instructor grade processing time by ~25% and improving data-driven decision-making for academic leadership",
-    "Mentored students in research initiatives, applying R and Python for statistical analysis and data exploration.."
+    "Built CNN and Vision Transformer models for ML-driven satellite classification, achieving∼91% accuracy across 8K+ samples.",
+    "Containerized ML inference pipelines via Docker and Kubernetes on Azure VM, cutting serving latency by 30%.",
+    "Developed REST APIs with FastAPI for AI-powered satellite classification, enabling scalable model access for distributed teams.",
+    "Engineered automated data preprocessing pipelines with Python and OpenCV, improving training data quality by 35% across satellite datasets."
     ],
     technologies: ["React", "TypeScript", "FastAPI", "Python", "Spring Boot", "AWS", "Pinecone", "LangChain", "Gemini LLM"],
   },
