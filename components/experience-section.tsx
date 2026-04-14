@@ -11,8 +11,6 @@ interface ExperienceItem {
   period: string
   type: string
   description: string
-  responsibilities: string[]
-  technologies: string[]
 }
 
 const experienceData: ExperienceItem[] = [
@@ -23,50 +21,16 @@ const experienceData: ExperienceItem[] = [
     period: "Jun 2025 - Current",
     type: "Full-time",
     description:
-      "Contributing to the design and development of scalable microservices and enterprise applications using Java, Spring Boot, and React. Supporting mission-critical internal and client-facing platforms serving 2M+ active users globally while adhering to IBM's enterprise architecture standards and secure development practices.",
-    responsibilities: [
-      "Contributed to designing and developing scalable microservices using Java, Spring Boot, and React, supporting enterprise platforms serving 2M+ active users globally.",
-      "Developed secure RESTful APIs integrated with OAuth 2.0 and JWT, strengthening role-based access control and improving PostgreSQL and Oracle query performance by ~30%.",
-      "Built reusable UI components using React and TypeScript, collaborating with senior engineers to achieve ~24% faster dashboard page load times.",
-      "Assisted in strengthening CI/CD pipelines using Jenkins, GitHub Actions, and Docker, reducing manual deployment effort and improving release cycle consistency.",
-      "Supported Kubernetes-based deployments on AWS (EC2, RDS, S3, Lambda), improving environment consistency and reducing release rollback incidents through optimized service orchestration.",
-      "Utilized AWS CloudWatch and centralized logging tools to proactively identify bottlenecks, reducing mean time to resolution (MTTR) by ~29% across distributed production systems."
-    ],
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "React",
-      "TypeScript",
-      "RESTful APIs",
-      "OAuth 2.0",
-      "JWT",
-      "PostgreSQL",
-      "Oracle",
-      "AWS (EC2, RDS, S3, Lambda)",
-      "CloudWatch",
-      "Docker",
-      "Kubernetes",
-      "Jenkins",
-      "GitHub Actions",
-      "CI/CD"
-    ],
+      "Designing an-critical platforms serving millions of users globally. Working across backend APIs, cloud infrastructure, and CI/CD pipelines while integrating AI-powered features to enhance product capabilities and system reliability. Led the development of a scalable microservice architecture for a key product, resulting in a 40% improvement in system performance and a 30% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 25%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
   {
-    
     title: "Graduate Research Assistant ",
     company: "University of North Carolina at Charlotte",
     location: "Charlotte, NC",
     period: "May 2024 - April 2025",
     type: "Part-time",
     description:
-    "Assisted the professor with course design, grading, and scheduling, while also conducting research on metabofood datasets to analyze supplements and disease cures using advanced visualization techniques",
-    responsibilities: [
-    "Built CNN and Vision Transformer models for ML-driven satellite classification, achieving∼91% accuracy across 8K+ samples.",
-    "Containerized ML inference pipelines via Docker and Kubernetes on Azure VM, cutting serving latency by 30%.",
-    "Developed REST APIs with FastAPI for AI-powered satellite classification, enabling scalable model access for distributed teams.",
-    "Engineered automated data preprocessing pipelines with Python and OpenCV, improving training data quality by 35% across satellite datasets."
-    ],
-    technologies: ["React", "TypeScript", "FastAPI", "Python", "Spring Boot", "AWS", "Pinecone", "LangChain", "Gemini LLM"],
+      "Conducting applied AI/ML research benchmarking LLM capabilities across code translation and test generation tasks. From building Vision Transformer models for  classification to engineering containerized inference pipelines on cloud infrastructure, bridging the gap between cutting-edge research and production-ready AI systems.  Engineered a containerized inference pipeline deployed, enabling scalable and efficient model serving for real-time applications.",
   },
   {
     title: "Software Engineer",
@@ -75,16 +39,7 @@ const experienceData: ExperienceItem[] = [
     period: "Jan 2022 - Dec 2023",
     type: "Full-time",
     description:
-      "Developed and enhanced enterprise web applications for global clients, focusing on performance optimization and scalability.",
-    responsibilities: [
-      "Designed and implemented modular microservices to modernize legacy systems, reducing application downtime by ~28% through improved fault isolation.",
-    "Optimized database schemas and SQL queries across MySQL and Oracle, resulting in ~34% faster data retrieval and improved reporting accuracy.",
-    "Built dynamic, responsive web interfaces using Angular and JavaScript, reducing end-user support tickets by 22% through improved UI consistency.",
-    "Supported  in cloud migration to AWS environments, contributing to a ~25% reduction in infrastructure costs through optimized resource utilization."
-    ],
-    technologies: [
-      "Java", "Spring MVC", "Angular", "JavaScript", "MySQL", "Oracle", "AWS", "Hibernate"
-    ],
+      "Developing and enhancing enterprise web applications for global clients, reducing application downtime by ~28% through modular microservice architecture. From modernizing legacy systems and optimizing database performance to exploring AI-driven approaches for system monitoring, turning monolithic platforms into scalable, intelligent solutions. Led the development of a microservice-based architecture for a major client, resulting in a 30% improvement in system scalability and a 25% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 28%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
 ]
 
@@ -172,43 +127,9 @@ export function ExperienceSection() {
                           </div>
                         </div>
 
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
-
-                        <div className="mb-4">
-                          <h4 className="text-sm font-semibold text-foreground mb-3">
-                            Key Responsibilities:
-                          </h4>
-                          <div className="space-y-2">
-                            {item.responsibilities.map((resp, idx) => (
-                              <div key={idx} className="flex items-start gap-2">
-                                <span className="text-primary mt-1.5 flex-shrink-0">
-                                  ▸
-                                </span>
-                                <span className="text-sm text-muted-foreground">
-                                  {resp}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div>
-                          <h4 className="text-sm font-semibold text-foreground mb-3">
-                            Technologies Used:
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {item.technologies.map((tech, idx) => (
-                              <span
-                                key={idx}
-                                className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
                       </div>
                     </GlassSurface>
                   </div>
@@ -226,8 +147,8 @@ export function ExperienceSection() {
           className="text-center mt-12"
         >
           <p className="italic inline-block px-1 rounded-sm text-white bg-teal-400/20">
-  3 years of professional software engineering experience
-</p>
+            3 years of professional software engineering experience
+          </p>
         </motion.div>
       </div>
     </section>
