@@ -1,8 +1,10 @@
 "use client"
 
+import React from "react"
 import { motion } from "framer-motion"
 import { Briefcase, Calendar, MapPin, TrendingUp } from "lucide-react"
 import GlassSurface from "@/components/glass-surface"
+import Image from "next/image"
 
 interface ExperienceItem {
   title: string
@@ -11,6 +13,7 @@ interface ExperienceItem {
   period: string
   type: string
   description: string
+  logoPath: string
 }
 
 const experienceData: ExperienceItem[] = [
@@ -20,17 +23,19 @@ const experienceData: ExperienceItem[] = [
     location: "Remote, NC",
     period: "Jun 2025 - Current",
     type: "Full-time",
+    logoPath: "/ibm.svg",
     description:
       "Designing an-critical platforms serving millions of users globally. Working across backend APIs, cloud infrastructure, and CI/CD pipelines while integrating AI-powered features to enhance product capabilities and system reliability. Led the development of a scalable microservice architecture for a key product, resulting in a 40% improvement in system performance and a 30% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 25%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
   {
-    title: "Graduate Research Assistant ",
+    title: "Graduate Research Assistant",
     company: "University of North Carolina at Charlotte",
     location: "Charlotte, NC",
     period: "May 2024 - April 2025",
     type: "Part-time",
+    logoPath: "/Uncc.jpeg",
     description:
-      "Conducting applied AI/ML research benchmarking LLM capabilities across code translation and test generation tasks. From building Vision Transformer models for  classification to engineering containerized inference pipelines on cloud infrastructure, bridging the gap between cutting-edge research and production-ready AI systems.  Engineered a containerized inference pipeline deployed, enabling scalable and efficient model serving for real-time applications.",
+      "Conducting applied AI/ML research benchmarking LLM capabilities across code translation and test generation tasks. From building Vision Transformer models for classification to engineering containerized inference pipelines on cloud infrastructure, bridging the gap between cutting-edge research and production-ready AI systems. Engineered a containerized inference pipeline deployed, enabling scalable and efficient model serving for real-time applications.",
   },
   {
     title: "Software Engineer",
@@ -38,6 +43,7 @@ const experienceData: ExperienceItem[] = [
     location: "Hyderabad, India",
     period: "Jan 2022 - Dec 2023",
     type: "Full-time",
+    logoPath: "/ACC logo.png",
     description:
       "Developing and enhancing enterprise web applications for global clients, reducing application downtime by ~28% through modular microservice architecture. From modernizing legacy systems and optimizing database performance to exploring AI-driven approaches for system monitoring, turning monolithic platforms into scalable, intelligent solutions. Led the development of a microservice-based architecture for a major client, resulting in a 30% improvement in system scalability and a 25% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 28%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
@@ -65,9 +71,21 @@ export function ExperienceSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
             Work Experience
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 text-balance">
             Building impactful solutions and growing as a software engineer
           </p>
+
+          {/* Moved up: Highlights total metric on top of the cards */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <p className="italic inline-block px-3 py-1.5 rounded-sm text-sm text-white bg-teal-400/20 border border-teal-500/30 shadow-md">
+              3 years of professional software engineering experience
+            </p>
+          </motion.div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -104,10 +122,28 @@ export function ExperienceSection() {
                             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
                               {item.title}
                             </h3>
-                            <p className="text-lg font-semibold text-primary mb-1">
-                              {item.company}
-                            </p>
+                            
+                            <div className="flex items-center gap-3 mb-1">
+                              <div className={`relative flex-shrink-0 overflow-hidden ${
+                                item.company === "IBM" ? "w-14 h-6" : "w-7 h-5 rounded bg-white/5 p-0.5"
+                              }`}>
+                                <Image
+                                  src={item.logoPath}
+                                  alt={`${item.company} logo`}
+                                  fill
+                                  className="object-contain object-left"
+                                  priority={index === 0}
+                                />
+                              </div>
+
+                              {item.company !== "IBM" && (
+                                <p className="text-lg font-semibold text-primary">
+                                  {item.company}
+                                </p>
+                              )}
+                            </div>
                           </div>
+                          
                           <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20">
                             <p className="text-sm font-semibold text-primary flex items-center gap-2">
                               <TrendingUp className="w-4 h-4" />
@@ -138,18 +174,6 @@ export function ExperienceSection() {
             ))}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <p className="italic inline-block px-1 rounded-sm text-white bg-teal-400/20">
-            3 years of professional software engineering experience
-          </p>
-        </motion.div>
       </div>
     </section>
   )

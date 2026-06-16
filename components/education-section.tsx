@@ -1,8 +1,10 @@
 "use client"
 
+import React from "react"
 import { motion } from "framer-motion"
-import { GraduationCap, Calendar, MapPin } from "lucide-react"
+import { GraduationCap, MapPin } from "lucide-react"
 import GlassSurface from "@/components/glass-surface"
+import Image from "next/image"
 
 interface EducationItem {
   degree: string
@@ -12,6 +14,7 @@ interface EducationItem {
   description: string
   gpa?: string
   highlights?: string[]
+  logoPath: string // Links directly to your green highlighted assets
 }
 
 const educationData: EducationItem[] = [
@@ -23,21 +26,18 @@ const educationData: EducationItem[] = [
     gpa: "3.8/4.0",
     description:
       "I completed my Master’s degree in Computer Science (Concentration in Data Science) at UNC Charlotte with a GPA of 3.80. My coursework included Algorithms & Data Structures, Artificial Intelligence, Visual Analytics, Computer Communications & Networks, Survey of Programming Languages, Principles of Information Security & Privacy, Software System Design & Implementation, Big Data Analytics for Competitive Advantage, Illustrative Visualization, and Database Systems. Through this program, I developed hands-on projects that reflect my technical skills and real-world problem-solving abilities.",
-    highlights: [
-     
-    ],
+    logoPath: "/Uncc.jpeg", // Matches 'Uncc.jpeg' from your public folder
+    highlights: [],
   },
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "Vellore Institute of Technology",
     location: "India",
     period: "Jul 2019 - May 2023",
-    
     description:
       "I completed my Bachelor's in Computer Science at Vellore Institute of Technology . My coursework included Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Machine Learning, Internet of Things, and Cryptography & Network Security. Through this program, I led team projects in IoT, Machine Learning, and Blockchain technologies, served as a core member of the Coding Club, and won the 'Most Contemporary Project' award at the Engineering Clinics Expo 2020.",
-    highlights: [
-      
-    ],
+    logoPath: "/vit.png", // Matches 'vit.png' from your public folder
+    highlights: [],
   },
 ]
 
@@ -82,6 +82,7 @@ export function EducationSection() {
                 className="relative mb-12 last:mb-0"
               >
                 <div className="flex gap-6 md:gap-8">
+                  {/* Clean timeline circle node stays empty/generic as desired */}
                   <div className="relative flex-shrink-0 hidden md:block">
                     <div className="w-16 h-16 rounded-full bg-primary/10 border-4 border-background flex items-center justify-center relative z-10">
                       <GraduationCap className="w-7 h-7 text-primary" />
@@ -102,9 +103,21 @@ export function EducationSection() {
                             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
                               {item.degree}
                             </h3>
-                            <p className="text-lg font-semibold text-primary mb-1">
-                              {item.institution}
-                            </p>
+                            {/* Inline custom brand image layout container */}
+                            <div className="flex items-center gap-3 mb-1">
+                              <div className="relative w-6 h-6 flex-shrink-0 rounded bg-white/5 p-0.5 overflow-hidden">
+                                <Image
+                                  src={item.logoPath}
+                                  alt={`${item.institution} logo`}
+                                  fill
+                                  className="object-contain"
+                                  priority={index === 0}
+                                />
+                              </div>
+                              <p className="text-lg font-semibold text-primary">
+                                {item.institution}
+                              </p>
+                            </div>
                           </div>
                           {item.gpa && (
                             <div className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20">
@@ -115,9 +128,7 @@ export function EducationSection() {
                           )}
                         </div>
 
-                        {/* MODIFIED: Removed the Calendar/period display here */}
                         <div className="flex flex-wrap gap-4 mb-4 text-sm text-muted-foreground">
-                          {/* The previous div for Calendar and item.period is gone */}
                           <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
                             <span>{item.location}</span>
@@ -127,21 +138,6 @@ export function EducationSection() {
                         <p className="text-muted-foreground mb-4 leading-relaxed">
                           {item.description}
                         </p>
-
-                        {item.highlights && item.highlights.length > 0 && (
-                          <div className="space-y-2">
-                            {item.highlights.map((highlight, idx) => (
-                              <div key={idx} className="flex items-start gap-2">
-                                <span className="text-primary mt-1.5 flex-shrink-0">
-                                  ▸
-                                </span>
-                                <span className="text-sm text-muted-foreground">
-                                  {highlight}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
                       </div>
                     </GlassSurface>
                   </div>

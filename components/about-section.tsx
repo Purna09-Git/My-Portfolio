@@ -75,12 +75,15 @@ export function AboutSection() {
           >
             <GlassSurface width="100%" height={280} borderRadius={20} displace={5} className="h-full">
               <div className="p-8 text-left w-full h-full overflow-auto">
-                <h3 className="text-2xl font-bold text-foreground mb-4">My Journey</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Who am I?</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                My path began with a fascination for how data connects the physical and digital worlds, leading me to lead research projects in IoT and Machine Learning during my undergraduate studies. This technical curiosity evolved into a deep specialization in Data Science and Algorithms during my Master's program.
+                  <strong className="text-white font-semibold">Hi, I'm Sai Kiran.</strong> A Computer Science graduate student at UNCC with a deep specialization in full-stack architecture and scalable AI systems, driven to engineer intelligent applications that turn complex data into human-centric solutions.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  I spent 2 years at Accenture as a Software Engineer, working across high-stakes engineering problems that demanded both technical precision and clear communication to solve.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                Today, I leverage that rigorous background to architect cloud-native systems, moving beyond simple web development to build intelligent, scalable ecosystems that power the next generation of software.
+                  That experience taught me how to turn software complexity into clarity — and how great architectural decisions only matter when they are seamlessly connected to final user and product goals.
                 </p>
               </div>
             </GlassSurface>
@@ -95,22 +98,23 @@ export function AboutSection() {
             <GlassSurface width="100%" height={280} borderRadius={20} displace={5} className="h-full">
               <div className="p-8 text-left w-full h-full overflow-auto">
                 <h3 className="text-2xl font-bold text-foreground mb-4">What I Do</h3>
-                <ul className="space-y-3 text-muted-foreground">
+                {/* Restored the clean ul layout with the primary color caret bullets */}
+                <ul className="space-y-3 text-muted-foreground text-sm md:text-base">
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">▸</span>
-                    <span>Architect and deploy scalable Microservices and Serverless solutions on AWS to ensure high availability, fault tolerance, and massive scale.</span>
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>I bridge full-stack engineering and cloud-native AI architectures by deploying fault-tolerant microservices and global containerized platforms across AWS, Azure, and GCP.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">▸</span>
-                    <span>Engineer intelligent full-stack applications by integrating Generative AI (LLMs) and predictive Machine Learning models to drive automation and smarter user experiences.</span>
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>Centering on Generative AI, I design domain-specific LLM applications, construct robust RAG pipelines, and deploy agents that turn complex datasets into human-centric solutions.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">▸</span>
-                    <span>Develop robust, secure web platforms using React, Next.js, and JavaScript, optimizing heavily for performance, security, and maintainability.</span>
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>From fine-tuning transformer models to optimizing streaming systems with Kafka, I engineer end-to-end software built for production stability, speed, and measurable scale.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">▸</span>
-                    <span>Collaborate with teams to transform ideas into production-ready products</span>
+                    <span className="text-primary mt-1 shrink-0">▸</span>
+                    <span>By connecting robust cloud infrastructure with intelligent ML workflows, I take full ownership to quickly transform intricate software complexities into production-ready features.</span>
                   </li>
                 </ul>
               </div>
@@ -125,38 +129,33 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
- {highlights.map((highlight) => (
-  <motion.div key={highlight.title} variants={itemVariants} className="h-full">
-    {/* 1. Increased height from 220 to 320 to fit the text description.
-      2. If GlassSurface supports "auto" height, that is preferred, but assuming 
-         it requires a number for the canvas render, 320 is safer.
-    */}
-    <GlassSurface 
-      width="100%" 
-      height={320} 
-      borderRadius={16} 
-      displace={3} 
-      className="h-full"
-    >
-      {/* Added flex-col and justify-between to balance spacing if text lengths vary */}
-      <div className="p-6 text-center w-full h-full flex flex-col items-center">
-        <div className="flex justify-center mb-4 shrink-0">
-          <div className="p-3 bg-primary/10 rounded-lg">
-            <highlight.icon className="w-8 h-8 text-primary" />
-          </div>
-        </div>
-        
-        <h4 className="text-lg font-semibold text-foreground mb-3 shrink-0">
-          {highlight.title}
-        </h4>
-        
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {highlight.description}
-        </p>
-      </div>
-    </GlassSurface>
-  </motion.div>
-))}
+          {highlights.map((highlight) => (
+            <motion.div key={highlight.title} variants={itemVariants} className="h-full">
+              <GlassSurface 
+                width="100%" 
+                height={320} 
+                borderRadius={16} 
+                displace={3} 
+                className="h-full"
+              >
+                <div className="p-6 text-center w-full h-full flex flex-col items-center">
+                  <div className="flex justify-center mb-4 shrink-0">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                      <highlight.icon className="w-8 h-8 text-primary" />
+                    </div>
+                  </div>
+                  
+                  <h4 className="text-lg font-semibold text-foreground mb-3 shrink-0">
+                    {highlight.title}
+                  </h4>
+                  
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {highlight.description}
+                  </p>
+                </div>
+              </GlassSurface>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -1,10 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { Mail, Linkedin, Github, Instagram, Send } from "lucide-react" 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -44,30 +43,39 @@ export function ContactSection() {
     setIsSubmitting(false)
   }
 
+  // Pure digital profiles format - UPDATE YOUR EMAIL HERE
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "purna.mummani12@gmail.com",
-      href: "mailto:purna.mummani12@gmail.com",
+      label: "EMAIL",
+      value: "saikiran.mummani09@gmail.com", // <-- Change this line
+      href: "mailto:saikiran.mummani09@gmail.com", // <-- Change this line too
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (704) 299-0350",
-      href: "tel:+17042990350",
+      icon: Linkedin,
+      label: "LINKEDIN",
+      value: "linkedin.com/in/purna09",
+      href: "https://www.linkedin.com/in/purna09/",
     },
     {
-      icon: MapPin,
-      label: "Location",
-      value: "Charlotte, NC",
-      href: null,
+      icon: Github,
+      label: "GITHUB",
+      value: "github.com/Purna09-Git",
+      href: "https://github.com/Purna09-Git",
+    },
+    {
+      icon: Instagram,
+      label: "INSTAGRAM",
+      value: "@purna_mummani",
+      href: "https://instagram.com/",
     },
   ]
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-background/50 backdrop-blur-sm">
+    <section id="contact" className="pt-20 md:pt-32 pb-4 md:pb-6 bg-background/50 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Contact Heading Area */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,40 +83,51 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">Contact</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-            Feel free to reach out. I'm always open to discussing new
-            opportunities and collaborations.
-          </p>
+          <h6 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">
+            Get In Touch
+          </h6>
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal text-foreground leading-tight text-balance">
+            Let's start a <span className="italic text-muted-foreground/80 font-light">conversation.</span>
+          </h1>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Contact Info */}
+        {/* 2-Column Main Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
+          
+          {/* Left Column: Contact Links & Beautiful Status Message Panel */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="flex flex-col gap-6"
           >
-            <GlassSurface width="100%" height={320} borderRadius={20} displace={5}>
-              <div className="p-8 w-full h-full overflow-auto text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
-                <div className="space-y-6">
+            {/* Upper Glass Box - Social Links Grid */}
+            <GlassSurface width="100%" height={360} borderRadius={20} displace={5}>
+              <div className="p-8 w-full h-full flex flex-col justify-start text-left">
+                <h3 className="text-xl font-bold text-foreground mb-6">Contact Information</h3>
+                
+                <div className="flex flex-col gap-5 overflow-y-auto pr-2">
                   {contactInfo.map((info) => (
-                    <div key={info.label} className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <info.icon className="w-6 h-6 text-primary" />
+                    <div key={info.label} className="flex items-center gap-4">
+                      {/* Brand Colored Icon Background Wrap */}
+                      <div className="p-2.5 bg-primary/10 rounded-lg shrink-0 flex items-center justify-center">
+                        <info.icon className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
-                        {info.href ? (
-                          <a href={info.href} className="text-muted-foreground hover:text-primary transition-colors">
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{info.value}</p>
-                        )}
+                      
+                      {/* Clean Text Label Stack */}
+                      <div className="flex flex-col">
+                        <span className="text-[10px] font-bold tracking-widest text-muted-foreground/70 uppercase">
+                          {info.label}
+                        </span>
+                        <a 
+                          href={info.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-sm font-medium text-foreground hover:text-primary transition-colors break-all"
+                        >
+                          {info.value}
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -116,39 +135,39 @@ export function ContactSection() {
               </div>
             </GlassSurface>
 
-            <GlassSurface width="100%" height={200} borderRadius={20} displace={5}>
-  <div className="p-8 w-full text-left relative flex flex-col justify-center">
-    <div className="flex items-center gap-3 mb-4">
-      
-      <span 
-        className="text-xs font-mono uppercase tracking-widest font-bold"
-        style={{ color: '#009ba9' }}
-      >
-        Open for new challenges
-      </span>
-    </div>
-
-    <h3 className="text-xl font-bold text-foreground mb-2">Let’s Connect and Explore Innovative Solutions Together!</h3>
-    <p className="text-muted-foreground leading-relaxed text-sm">
-    
-    </p>
-  </div>
-</GlassSurface>
- 
+            {/* LOWER BOX: Beautifully balanced text styling layout */}
+            <GlassSurface width="100%" height={160} borderRadius={20} displace={5}>
+              <div className="p-8 w-full h-full text-left flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-2.5">
+                  <span 
+                    className="text-[10px] font-mono uppercase tracking-widest font-bold"
+                    style={{ color: '#009ba9' }}
+                  >
+                    Open for new challenges
+                  </span>
+                </div>
+                
+                <p className="text-xs md:text-sm font-normal text-muted-foreground leading-relaxed">
+                  Open to AI, backend infrastructure, and deep technical engineering roles. Whether it's a system architecture challenge, an ML pipeline, or just a good conversation about data scale and intelligence — <span className="text-primary font-medium hover:underline cursor-pointer">reach out.</span>
+                </p>
+              </div>
+            </GlassSurface>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Right Column: Complete Message Submit Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="w-full"
           >
-            <GlassSurface width="100%" height="100%" borderRadius={20} displace={5} className="min-h-[536px]">
-              <div className="p-8 w-full h-full overflow-auto">
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <GlassSurface width="100%" height={546} borderRadius={20} displace={5}>
+              <div className="p-8 w-full h-full flex flex-col justify-between">
+                <form onSubmit={handleSubmit} className="space-y-4 text-left flex flex-col h-full justify-between">
+                  
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
                       Name
                     </label>
                     <Input
@@ -159,12 +178,12 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your Name"
-                      className="bg-background/50"
+                      className="bg-background/50 border-border"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
                       Email
                     </label>
                     <Input
@@ -174,13 +193,13 @@ export function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="your.email@example.com"
-                      className="bg-background/50"
+                      placeholder="Your Email" // <-- Placeholder updated here too!
+                      className="bg-background/50 border-border"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1.5">
                       Subject
                     </label>
                     <Input
@@ -191,12 +210,12 @@ export function ContactSection() {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="What's this about?"
-                      className="bg-background/50"
+                      className="bg-background/50 border-border"
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <div className="flex-grow flex flex-col mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
                       Message
                     </label>
                     <Textarea
@@ -206,12 +225,11 @@ export function ContactSection() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell me about your project or idea..."
-                      rows={6}
-                      className="bg-background/50 resize-none"
+                      className="bg-background/50 border-border resize-none flex-grow"
                     />
                   </div>
 
-                  <Button type="submit" disabled={isSubmitting} className="w-full" size="lg">
+                  <Button type="submit" disabled={isSubmitting} className="w-full mt-auto" size="lg">
                     {isSubmitting ? (
                       "Sending..."
                     ) : (
@@ -225,6 +243,7 @@ export function ContactSection() {
               </div>
             </GlassSurface>
           </motion.div>
+
         </div>
       </div>
     </section>

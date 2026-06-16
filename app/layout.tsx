@@ -9,13 +9,13 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Purna Mummani | Portfolio",
+  title: "Sai Kiran Mummani | Portfolio",
   description: "A showcase of my work, skills, and experience as a Software Engineer",
   generator: "",
   keywords: ["portfolio", "developer", "full stack", "web development", "projects"],
-  authors: [{ name: "Purna Mummani" }],
+  authors: [{ name: "Sai Kiran Mummani" }],
   openGraph: {
-    title: "Purna Mummani | Portfolio",
+    title: "Sai Kiran Portfolio",
     description: "A showcase of my work, skills, and experience as a Software Engineer",
     type: "website",
   },
@@ -32,11 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
-      <body className="font-sans antialiased bg-background text-foreground">
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="dark" 
-          forcedTheme="dark" 
+      {/* 
+        FIXED: Removed 'bg-background' from the body tag so it remains transparent,
+        allowing the dynamic LightRays background to visibly shine through from behind!
+      */}
+      <body className="font-sans antialiased text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          forcedTheme="dark"
           enableSystem={false}
         >
           {children}

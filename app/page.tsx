@@ -2,14 +2,14 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import EnhancedHeroSection from "@/components/enhanced-hero-section"
 import { AboutSection } from "@/components/about-section"
-import { EducationSection } from "@/components/education-section"
 import { ExperienceSection } from "@/components/experience-section"
+import { EducationSection } from "@/components/education-section"
 import { ProjectsSection } from "@/components/projects-section"
 import EnhancedSkillsSection from "@/components/enhanced-skills-section"
 import CoreCompetenciesSection from "@/components/CoreCompetenciesSection"
 import { ContactSection } from "@/components/contact-section"
 import { Chatbot } from "@/components/chatbot"
-import  ScrollToTop  from "@/components/scroll-to-top"
+import ScrollToTop from "@/components/scroll-to-top"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { LoadingScreen } from "@/components/loading-screen"
 import LightRays from "@/components/light-rays"
@@ -43,16 +43,24 @@ export default function HomePage() {
       <main className="relative z-10">
         <EnhancedHeroSection />
         <AboutSection />
-        <EducationSection />
+        
+        {/* 1. Professional Experience takes top priority */}
         <ExperienceSection /> 
+
+        {/* 2. Academic Journey second */}
+        <EducationSection />
+        
+        {/* 3. Technical Projects third */}
         <ProjectsSection />
+        
+        {/* 4. Skills and Core Competencies fourth */}
         <EnhancedSkillsSection />
         <CoreCompetenciesSection />
+        
+        {/* 5. Contact Form and Footer at the bottom */}
         <ContactSection />
         <Footer />
       </main>
-
-    
 
       <Chatbot />
       <ScrollToTop />

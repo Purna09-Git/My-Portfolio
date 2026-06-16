@@ -31,7 +31,7 @@ export function LoadingScreen() {
             >
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
                 <span className="text-primary">{"<"}</span>
-                PURNA MUMMANI
+               SAI KIRAN MUMMANI
                 <span className="text-primary">{"/>"}</span>
               </h1>
             </motion.div>
