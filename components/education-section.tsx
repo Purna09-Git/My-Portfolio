@@ -26,17 +26,17 @@ const educationData: EducationItem[] = [
     gpa: "3.8/4.0",
     description:
       "I completed my Master’s degree in Computer Science (Concentration in Data Science) at UNC Charlotte with a GPA of 3.80. My coursework included Algorithms & Data Structures, Artificial Intelligence, Visual Analytics, Computer Communications & Networks, Survey of Programming Languages, Principles of Information Security & Privacy, Software System Design & Implementation, Big Data Analytics for Competitive Advantage, Illustrative Visualization, and Database Systems. Through this program, I developed hands-on projects that reflect my technical skills and real-world problem-solving abilities.",
-    logoPath: "/Uncc.jpeg", // Matches 'Uncc.jpeg' from your public folder
+    logoPath: "/My-Portfolio/Uncc.jpeg", // Matches 'Uncc.jpeg' from your public folder
     highlights: [],
   },
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "Vellore Institute of Technology",
     location: "India",
-    period: "Jul 2019 - May 2023",
+    period: "Jul 2019 - May 2022",
     description:
       "I completed my Bachelor's in Computer Science at Vellore Institute of Technology . My coursework included Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Machine Learning, Internet of Things, and Cryptography & Network Security. Through this program, I led team projects in IoT, Machine Learning, and Blockchain technologies, served as a core member of the Coding Club, and won the 'Most Contemporary Project' award at the Engineering Clinics Expo 2020.",
-    logoPath: "/vit.png", // Matches 'vit.png' from your public folder
+    logoPath: "/My-Portfolio/vit.png", // Matches 'vit.png' from your public folder
     highlights: [],
   },
 ]

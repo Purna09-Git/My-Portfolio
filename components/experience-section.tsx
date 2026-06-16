@@ -23,7 +23,7 @@ const experienceData: ExperienceItem[] = [
     location: "Remote, NC",
     period: "Jun 2025 - Current",
     type: "Full-time",
-    logoPath: "/ibm.svg",
+    logoPath: "/My-Portfolio/ibm.svg",
     description:
       "Designing an-critical platforms serving millions of users globally. Working across backend APIs, cloud infrastructure, and CI/CD pipelines while integrating AI-powered features to enhance product capabilities and system reliability. Led the development of a scalable microservice architecture for a key product, resulting in a 40% improvement in system performance and a 30% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 25%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
@@ -33,7 +33,7 @@ const experienceData: ExperienceItem[] = [
     location: "Charlotte, NC",
     period: "May 2024 - April 2025",
     type: "Part-time",
-    logoPath: "/Uncc.jpeg",
+    logoPath: "/My-Portfolio/Uncc.jpeg",
     description:
       "Conducting applied AI/ML research benchmarking LLM capabilities across code translation and test generation tasks. From building Vision Transformer models for classification to engineering containerized inference pipelines on cloud infrastructure, bridging the gap between cutting-edge research and production-ready AI systems. Engineered a containerized inference pipeline deployed, enabling scalable and efficient model serving for real-time applications.",
   },
@@ -43,7 +43,7 @@ const experienceData: ExperienceItem[] = [
     location: "Hyderabad, India",
     period: "Jan 2022 - Dec 2023",
     type: "Full-time",
-    logoPath: "/ACC logo.png",
+    logoPath: "/My-Portfolio/ACC logo.png",
     description:
       "Developing and enhancing enterprise web applications for global clients, reducing application downtime by ~28% through modular microservice architecture. From modernizing legacy systems and optimizing database performance to exploring AI-driven approaches for system monitoring, turning monolithic platforms into scalable, intelligent solutions. Led the development of a microservice-based architecture for a major client, resulting in a 30% improvement in system scalability and a 25% reduction in deployment times. Implemented AI-driven monitoring solutions that proactively identified and resolved system issues, reducing downtime by 28%. Collaborated with cross-functional teams to integrate AI features into existing applications, enhancing user experience and functionality.",
   },
